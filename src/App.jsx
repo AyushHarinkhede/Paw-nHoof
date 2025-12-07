@@ -59,7 +59,7 @@ const Hero = ({ setView }) => (
       </div>
     </div>
   </section>
-);
+); 
 
 const Pets = ({ likedPets, toggleLike }) => {
   const [filter, setFilter] = useState('Paw'); // Paw or Hoof
