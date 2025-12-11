@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import index from '/Index.jsx'
+import index from './index.js'
+import index from './index.css'
+
 // --- Components ---
 
 const Navbar = ({ view, setView, cartCount }) => (
