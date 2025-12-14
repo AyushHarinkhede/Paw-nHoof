@@ -156,6 +156,7 @@ function App() {
 
       {/* Navbar */}
       <nav>
+         <div className="nav-links">
         <div className="logo">
           <svg width="30" height="30" viewBox="0 0 24 24" fill="var(--deep-green)">
             <path d="M12,2C13.1,2 14,2.9 14,4S13.1,6 12,6S10,5.1 10,4S10.9,2 12,2M7,5C8.1,5 9,5.9 9,7S8.1,9 7,9S5,8.1 5,7S5.9,5 7,5M17,5C18.1,5 19,5.9 19,7S18.1,9 17,9S15.9,9 15,7S15.9,5 17,5M12,8C15,8 17,9.5 18,12C18.6,13.5 18.1,17.4 16,19C14.7,20 13.5,19.5 12,19.5C10.5,19.5 9.3,20 8,19C5.9,17.4 5.4,13.5 6,12C7,9.5 9,8 12,8Z"/>
@@ -167,7 +168,7 @@ function App() {
           <a href="#feed">Feed Center</a>
           <a href="#pets">Pets</a>
           <a href="#about">About</a>
-        </div>
+        </div></div>
         <div className="auth-btn-container">
           {!isLoggedIn ? (
             <button className="login-btn" onClick={() => openAuthModal('login')}>Sign In</button>
@@ -422,6 +423,7 @@ function App() {
             {name: 'Sheru', breed: 'Indian Pariah | Male', location: 'Hingna Road', emoji: '🐕', bg: 'var(--pastel-blue)'},
             {name: 'Mimi', breed: 'Persian Mix | Female', location: 'Sadar', emoji: '🐈', bg: 'var(--pastel-pink)'},
             {name: 'Chiku', breed: 'Squirrel | Rescue', location: 'Seminary Hills', emoji: '🐿️', bg: 'var(--pastel-green)'}
+            
           ].map((pet, i) => (
             <div key={i} className="pet-card">
               <div className="pet-img-box" style={{background: pet.bg}}>

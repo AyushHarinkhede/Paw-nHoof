@@ -8,7 +8,7 @@
     --pastel-blue: #9b8aff; 
     --pastel-pink: #d4a5ff; 
     --pastel-yellow: #e8d9ff;
-    --pastel-purple: #7c5cff;
+    --pastel-purple: #6640fd;
     
     /* Darker Shades for Text */
     --text-dark: #2d1b4e;
@@ -65,10 +65,11 @@
         }
 
         body {
-            background: linear-gradient(135deg, #e0f7fa 0%, #fff3e0 100%);
+            background: linear-gradient(135deg, #6b4ef7 0%, #9b8aff 100%);
             color: var(--text-dark);
             overflow-x: hidden;
             position: relative;
+            min-height: 100vh;
         }
 
   /* --- 0. BACKGROUND SHADOW ANIMALS (CSS Shapes) --- */
@@ -98,12 +99,11 @@
             position: fixed;
             top: 20px;
             left: 5%;
-            width: 90%;
+            width: 91%;
             padding: 15px 30px;
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
+            -webkit-backdrop-filter: blur(12px);          
             border-radius: 50px;
             display: flex;
             justify-content: space-between;
@@ -125,6 +125,7 @@
         .nav-links {
             display: flex;
             gap: 25px;
+            align-items: center;
         }
  
         .nav-links a {
@@ -162,24 +163,7 @@
             
         }
 
-        .upload-image-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 20px;
-  background: var(--primary);
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-  fontSize: 0.9rem;
-  font-weight: bold;
-  transition: 0.3s;
-  text-align: center;
-}
-
-.upload-image-btn:hover {
-  background: var(--accent);
-  transform: scale(1.05);
-}
+    
 
         /* --- 2. HERO SECTION (Symmetrical Layout) --- */
         .hero {
@@ -189,6 +173,7 @@
             justify-content: space-around;
             padding: 100px 5% 50px;
             position: relative;
+            background: transparent;
         }
 
         .hero-text {
@@ -265,6 +250,7 @@
         .section-container {
             padding: 80px 10%;
             text-align: center;
+            background: transparent;
         }
 
         .section-title {
@@ -378,7 +364,7 @@
             padding: 80px 5%;
             border-radius: 50px 50px 0 0;
             margin-top: 50px;
-            
+          
         }
 
         .category-title {
@@ -403,13 +389,19 @@
 
         /* Profile Avatar in Nav */
         .user-avatar-nav {
-            width: 40px; height: 40px; border-radius: 50%;
+            width: 50px; height: 50px; border-radius: 50%;
             background: var(--p-purple); border: 2px solid var(--primary);
             display: none; justify-content: center; align-items: center;
             cursor: pointer; font-weight: bold; color: var(--primary);
             overflow: hidden;
         }
         .user-avatar-nav img { width: 100%; height: 100%; object-fit: cover; }
+
+       .user-avatar-nav:hover{
+ background: var(--accent);
+  transform: scale(1.10);
+  transition: transform 0.3s;
+       } 
 
         .login-btn {
             background: var(--primary); color: white;
@@ -418,21 +410,42 @@
         }
         .login-btn:hover { transform: scale(1.05); background: var(--accent); }
 
+    .upload-image-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: var(--primary);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  fontSize: 0.9rem;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.upload-image-btn:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
         /* Unique Pet Card */
         .pet-card {
-            background: white;
+            background: #4f23fd60;
             border-radius: 20px;
             padding: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 20px rgba(107, 78, 247, 0.02);
             transition: transform 0.3s;
             position: relative;
             overflow: hidden;
-            border: 2px solid var(--pastel-purple);
+            border: 2px solid rgba(155,138,255,0.3);
         }
 
         .pet-card:hover {
             transform: translateY(-10px);
-            background-color:rgb(251, 248, 242); 
+            background-color: #fefefe;
+            box-shadow: 0 15px 30px rgba(107, 78, 247, 0.3); 
         }
 
         .pet-img-box {
@@ -735,23 +748,25 @@
         /* --- AUTH & PROFILE MODAL --- */
         .modal-wrapper {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6); z-index: 4000;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px); z-index: 4000;
             display: none; justify-content: center; align-items: center;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px); color: var(--p-purple);
         }
 
         .auth-card {
-            background: var(--card-bg); width: 90%; max-width: 450px;
+           background: rgba(255, 255, 255, 0.373);
+            backdrop-filter: blur(10px); z-index: 3000; width: 90%; max-width: 450px;
             border-radius: 20px; padding: 30px; position: relative;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            max-height: 85vh; overflow-y: auto;
+            max-height: 85vh; overflow-y: auto;  color: var(--p-purple);
         }
 
         .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; }
 
         .auth-tabs { display: flex; margin-bottom: 20px; border-bottom: 1px solid #ddd; }
         .tab-btn { flex: 1; padding: 10px; background: none; border: none; cursor: pointer; font-weight: bold; color: var(--text-sub); }
-        .tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); }
+        .tab-btn.active { color: var(--p-purple); border-bottom: 3px solid var(--primary); }
 
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; margin-bottom: 5px; font-size: 0.9rem; }
