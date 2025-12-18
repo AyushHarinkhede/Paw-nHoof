@@ -877,7 +877,7 @@ function App() {
                 mapSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}>
-              <i className="fa-solid fa-location-dot"></i> Location
+              <i className="fa-solid fa-location-dot"></i> View Location
             </button>
           </div>
         </div>
