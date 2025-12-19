@@ -29,11 +29,11 @@ function App() {
   const [formErrors, setFormErrors] = useState({});
   
   const [profileData, setProfileData] = useState({
-    name: 'Ayush Harinkhede',
+    name: '',
     dob: '',
     mobile: '',
     address: '',
-    gender: 'Male',
+    gender: '',
     email: ''
   });
 
