@@ -143,13 +143,7 @@
         }
 
         .logo {
-            font-family: 'Caveat', cursive;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--deep-green);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+          
         }
 
         .nav-links {
