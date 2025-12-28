@@ -1,0 +1,551 @@
+:root {
+  --cream: #fdfaf7;
+  --light-brown: #f4eddf;
+  --dark-brown: #4a2c1f;
+  --shadow-brown: rgba(161, 125, 88, 0.25);
+  --mid-brown: #7a4b34;
+  --tan: #e6d3bb;
+  --cream-2: #fff7ec;
+}
+
+.adoptPage {
+  min-height: 100vh;
+  background: var(--cream);
+  padding: 48px 16px;
+  color: var(--dark-brown);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.adoptHeader {
+  max-width: 1100px;
+  margin: 0 auto 28px;
+}
+
+.adoptTitle {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--dark-brown);
+}
+
+.adoptSubtitle {
+  margin-top: 10px;
+  max-width: 720px;
+  color: var(--dark-brown);
+  opacity: 0.75;
+}
+
+.adoptNotice {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--light-brown);
+  box-shadow: 0 10px 20px var(--shadow-brown);
+  color: var(--dark-brown);
+  font-weight: 600;
+}
+
+.adoptFilters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.adoptChip {
+  border: 1px solid rgba(74, 44, 31, 0.35);
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: var(--cream);
+  color: var(--dark-brown);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.adoptChip:hover {
+  background: var(--light-brown);
+  transform: translateY(-1px);
+}
+
+.adoptChip.active {
+  background: var(--dark-brown);
+  color: var(--light-brown);
+}
+
+.adoptGrid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (min-width: 720px) {
+  .adoptGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .adoptGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.adoptLoading {
+  padding: 18px;
+  background: var(--light-brown);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px var(--shadow-brown);
+  font-weight: 700;
+}
+
+.petCard {
+  background: var(--cream-2);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px var(--shadow-brown);
+  border: 1px solid rgba(74, 44, 31, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.petCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px var(--shadow-brown);
+}
+
+.petImageWrap {
+  height: 240px;
+  background: var(--cream);
+}
+
+.petImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.petMedia {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(74, 44, 31, 0.1);
+}
+
+.petMediaTrack {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  transition: transform 240ms ease;
+}
+
+.petMediaSlide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.petMediaNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(74, 44, 31, 0.25);
+  background: rgba(253, 250, 247, 0.88);
+  color: var(--dark-brown);
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(74, 44, 31, 0.12);
+}
+
+.petMediaNav.prev {
+  left: 10px;
+}
+
+.petMediaNav.next {
+  right: 10px;
+}
+
+.petMediaDots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(253, 250, 247, 0.78);
+  border: 1px solid rgba(74, 44, 31, 0.18);
+}
+
+.petMediaDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(74, 44, 31, 0.22);
+}
+
+.petMediaDot.active {
+  background: var(--dark-brown);
+}
+
+.petBody {
+  padding: 16px;
+}
+
+.petTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.petName {
+  font-weight: 800;
+  color: var(--dark-brown);
+  font-size: 18px;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+}
+
+.petType {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 800;
+  background: var(--cream);
+  color: var(--dark-brown);
+  border: 1px solid rgba(74, 44, 31, 0.15);
+}
+
+.locationPill {
+  margin-top: 10px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 900;
+  border: 1px solid rgba(74, 44, 31, 0.18);
+  background: linear-gradient(90deg, var(--dark-brown), var(--mid-brown));
+  color: var(--cream);
+  box-shadow: 0 12px 20px rgba(74, 44, 31, 0.14);
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.locationPill .btnIcon {
+  color: var(--cream);
+}
+
+.locationPill:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.petMeta {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.petMetaRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.petMetaLabel {
+  font-weight: 800;
+  color: var(--dark-brown);
+  opacity: 0.72;
+}
+
+.petMetaValue {
+  font-weight: 800;
+  color: var(--dark-brown);
+}
+
+.petActions {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btnPrimary,
+.btnSecondary,
+.btnAid {
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+  border: 1px solid rgba(74, 44, 31, 0.25);
+  color: var(--dark-brown);
+}
+
+.btnPrimary:disabled,
+.btnSecondary:disabled,
+.btnAid:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+.btnPrimary:disabled:hover,
+.btnSecondary:disabled:hover,
+.btnAid:disabled:hover {
+  background: inherit;
+  color: inherit;
+  transform: none;
+}
+
+.btnIcon {
+  color: var(--dark-brown);
+}
+
+.btnPrimary {
+  background: var(--dark-brown);
+  color: var(--light-brown);
+}
+
+.btnPrimary .btnIcon {
+  color: var(--light-brown);
+}
+
+.btnPrimary:hover {
+  background: var(--light-brown);
+  color: var(--dark-brown);
+  transform: translateY(-1px);
+}
+
+.btnPrimary:disabled {
+  background: rgba(74, 44, 31, 0.7);
+  color: var(--light-brown);
+}
+
+.btnPrimary:hover .btnIcon {
+  color: var(--dark-brown);
+}
+
+.btnSecondary {
+  background: var(--light-brown);
+  color: var(--dark-brown);
+}
+
+.btnSecondary:hover {
+  background: var(--dark-brown);
+  color: var(--light-brown);
+  transform: translateY(-1px);
+}
+
+.btnSecondary:hover .btnIcon {
+  color: var(--light-brown);
+}
+
+.btnSecondary.liked {
+  background: var(--dark-brown);
+  color: var(--light-brown);
+}
+
+.btnSecondary.liked .btnIcon {
+  color: var(--light-brown);
+}
+
+.petAid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 520px) {
+  .petAid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.btnAid {
+  background: var(--cream);
+}
+
+.btnAid:hover {
+  background: var(--dark-brown);
+  color: var(--light-brown);
+  transform: translateY(-1px);
+}
+
+.btnAid:disabled {
+  background: rgba(253, 250, 247, 0.75);
+  color: rgba(74, 44, 31, 0.75);
+}
+
+.btnAid:hover .btnIcon {
+  color: var(--light-brown);
+}
+
+.btnMedical {
+  background: linear-gradient(90deg, #fff7ed, #f0e2d2);
+  border-color: rgba(122, 75, 52, 0.28);
+}
+
+.btnDonate {
+  background: linear-gradient(90deg, #fff1d6, #e6d3bb);
+  border-color: rgba(122, 75, 52, 0.28);
+}
+
+.btnRescue {
+  background: linear-gradient(90deg, #f7e3e3, #ead0d0);
+  border-color: rgba(122, 75, 52, 0.28);
+}
+
+.btnMedical:hover,
+.btnDonate:hover,
+.btnRescue:hover {
+  background: var(--dark-brown);
+  color: var(--cream);
+}
+
+.btnMedical:hover .btnIcon,
+.btnDonate:hover .btnIcon,
+.btnRescue:hover .btnIcon {
+  color: var(--cream);
+}
+
+.btnMedical:disabled,
+.btnDonate:disabled,
+.btnRescue:disabled {
+  background: rgba(255, 247, 236, 0.72);
+}
+
+.rescueSection {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+}
+
+.rescueHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.rescueTitle {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--dark-brown);
+}
+
+.rescueHint {
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+.rescueRow {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 6px 4px 14px;
+  scroll-snap-type: x mandatory;
+}
+
+.rescueRow::-webkit-scrollbar {
+  height: 10px;
+}
+
+.rescueRow::-webkit-scrollbar-thumb {
+  background: rgba(74, 44, 31, 0.22);
+  border-radius: 999px;
+}
+
+.rescueCard {
+  flex: 0 0 340px;
+  background: var(--cream-2);
+  border: 1px solid rgba(74, 44, 31, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(74, 44, 31, 0.12);
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.rescueBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(74, 44, 31, 0.9);
+  color: var(--cream);
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.rescueMedia {
+  height: 190px;
+}
+
+.rescueBody {
+  padding: 14px;
+}
+
+.rescueNameRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.rescueName {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--dark-brown);
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+}
+
+.rescueActions {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.viewMoreWrap {
+  max-width: 1100px;
+  margin: 22px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.viewMoreBtn {
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 900;
+  cursor: pointer;
+  border: 1px solid rgba(74, 44, 31, 0.25);
+  background: var(--dark-brown);
+  color: var(--cream);
+  box-shadow: 0 14px 28px rgba(74, 44, 31, 0.12);
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.viewMoreBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
