@@ -65,7 +65,7 @@
    // Goats
    { id: 12, name: "Balu", breed: "Desi Goat", gender: "Male", age: "2 years", location: "Itwari", type: "goat", needsRescue: false, needsMedical: false, needsDonate: false, lat: 21.1623, lng: 79.0923 },
    { id: 13, name: "Chhaya", breed: "Jamnapari", gender: "Female", age: "3 years", location: "Hingna Road", type: "goat", needsRescue: false, needsMedical: true, needsDonate: true, lat: 21.0968, lng: 78.9814 },
-   { id: 14, name: "Ramu", breed: "Barbari", gender: "Male", age: "1 year", location: "Sadar", type: "goat", needsRescue: true, needsMedical: false, needsDonate: false, lat: 21.1456, lng: 79.0882 },
+   { id: 14, name: "Ramu", breed: "Barbari", gender: "Male", age: "1 year", location: "Sadar", type: "goat", needsRescue: true, needsMedical: false, needsDonate: false, lat: 21.1456, lng: 79.0882 },  
  
    // Horses
    { id: 15, name: "Badal", breed: "Pony", gender: "Male", age: "5 years", location: "Futala", type: "horse", needsRescue: false, needsMedical: true, needsDonate: false, lat: 21.1289, lng: 79.0456 },
