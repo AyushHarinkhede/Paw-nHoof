@@ -14,7 +14,7 @@ function start(label, command, args, options = {}) {
     }
   });
  
-  return child;
+  return child; 
 }
 
 const node = process.execPath;
