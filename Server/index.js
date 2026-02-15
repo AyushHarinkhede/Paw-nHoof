@@ -12,7 +12,7 @@
    return Number.isFinite(n) ? n : null;
  }
  
- function readStore() {
+ function readStore() { 
    try {
      const raw = fs.readFileSync(STORE_PATH, "utf8");
      const parsed = JSON.parse(raw);
