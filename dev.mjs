@@ -1,10 +1,10 @@
 import { spawn } from "node:child_process";
-import { fileURLToPath } from "node:url"; 
+import { fileURLToPath } from "node:url";  
 
 function start(label, command, args, options = {}) {
   const child = spawn(command, args, {
     stdio: "inherit",
-    env: process.env,
+    env: process.env, 
     ...options, 
   });
 
